@@ -2,11 +2,18 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    min-width: 420px;
 }
 
-.text-bold {
+/* .fa-bell {
+  
+    fill: black
+} */
+
+/* .text-bold {
     font-weight: bold;
-}
+} */
+
 
 .text-red {
     color: red;
@@ -51,8 +58,6 @@ body {
 }
 
 
-/* header section */
-
 header {
     display: flex;
     align-items: center;
@@ -77,10 +82,6 @@ nav a:hover {
 input {
     padding: 0.5rem;
     padding-right: 1.5rem;
-/*     background-image: url("https://w7.pngwing.com/pngs/608/913/png-transparent-computer-icons-google-search-symbol-mobile-search-search-for-miscellaneous-logo-mobile-phones-thumbnail.png");
-    background-size: 1rem;
-    background-repeat: no-repeat;
-    background-position: right; */
 }
 
 .search-icon {
@@ -104,11 +105,10 @@ input {
     justify-content: flex-end;
 }
 
+
 h1 {
     color: red;
 }
-
-/* main section */
 
 main {
     margin: 1rem;
@@ -121,7 +121,7 @@ main {
     align-items: flex-start;
 }
 
-.rating-container {
+.icon-style {
     color: red;
 }
 
@@ -138,17 +138,16 @@ main h2 {
     width: 50%;
 }
 
-/* section */
 
 section {
     margin: 1rem;
     margin-bottom: 3rem;
 }
 
-.section-content, .section-header {
+.section-content, .others-info {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
     gap: 4rem;
 }
 
@@ -173,7 +172,7 @@ section {
     margin-left: 0;
 }
 
-/* footer */
+
 footer {
     display: flex;
     justify-content: space-between;
@@ -182,6 +181,7 @@ footer {
     margin: 1rem;
     margin-bottom: 10rem;
 }
+
 
 footer nav {
     display: flex;
@@ -194,21 +194,44 @@ footer p:nth-child(n+1) {
 }
 
 footer img {
-    height: 3rem;
     margin-top: -0.4rem;
 }
 
+
 footer div:first-child {
-    flex-basis: 60%;
+    flex-basis: 40%;
     flex-grow: 1;
+    flex-direction: row;
+    width: 260;
+}
+.social-media, .application {
+gap: 1px;
 }
 
+.social-media {
+    flex-basis: 30%;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    flex-direction: row;
+    margin: auto;
+}
+
+.application {
+    flex-basis: 30%;
+    display: flex;
+    width: 30px;
+    height: 40px;
+    flex-direction: row;
+   
+}
 
 footer nav a:first-child {
     margin-left: 0;
 }
 
 @media (max-width: 900px) {
+
     .description {
         width: inherit;
     }
@@ -219,10 +242,85 @@ footer nav a:first-child {
 
     header nav {
         order: 3;
-        width: 100%;
+        width: 100%;             
         text-align: center;
+        gap: ;
+    }
+
+    main {
+        min-width: 300px;
+        min-height: 420px;
+    }
+
+    h1 {
+        color: black;
+        text-transform: uppercase;
+    }
+    .search-buton {
+       
+        box-shadow: 10px;
+    }
+ 
+
+    main h2 {
+        font-size: 2.5rem;
+    }
+    /* .access-menu {
+        max-width:  100px;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        justify-content: flex-end;
+    } */
+    nav a {
+        text-decoration: underline;
+        color: mediumblue;
     }
     .section-content {
+        gap:1rem;
         overflow: auto;
+    }
+
+    .card {
+        padding: 1rem;
+        min-width: 40%;
+        margin-bottom: 20px;
+    }
+
+    .card h4 {
+        font-size: 1.2rem;
+        margin: 1.2rem 0;
+    }
+
+    .card .btn-l {
+        padding: 0.6rem 1.5rem;
+        padding-right: 1rem;
+    }
+
+    .card .btn-l i {
+        margin-left: -0.8rem;
+        margin-right: 0.4rem;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer>div:nth-child(1){
+        order:3
+    }
+    footer>div:nth-child(2){
+        order:2
+    }
+    footer>div:nth-child(3){
+        order:1
+    }
+
+    #doluZil {
+        display: none;
+    }
+
+    #bosZil {
+        display: inherit !important;
     }
 }
